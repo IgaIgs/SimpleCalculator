@@ -1,18 +1,15 @@
 public class CalculatorClass {
 
     public static void main(String[] args) {
-        System.out.println(calculations(50, 4, '%'));
+        System.out.println(calculations(90, 33, '8'));
 
     }
 
-    public static long calculations(long n, long m, char operation){
-        long result = 0;
+    public static double calculations(double n, double m, char operation){
+        double result = 0;
         switch (operation){
             case '/':
-                // this won't work properly cuz the result is a long - just pitching ideas
-                double nn = ((double) n);
-                double mm = ((double)m);
-                result = (long) (nn/mm);
+                result = n / m;
                 break;
             case '*':
                 result = n * m;
@@ -24,11 +21,13 @@ public class CalculatorClass {
                 result = n - m;
                 break;
             case '%':
-                // same as in the case of division
                 result = (n/100) * m;
                 break;
+            default:
+                System.out.println("This is not a valid operation. " +
+                        "Please choose one of the following:'+','-','/','*' or '%'. ");
+                break;
         }
-
-        return result;
+        return Math.round(result * 1000.0) / 1000.0;
     }
 }
