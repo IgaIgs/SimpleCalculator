@@ -9,11 +9,11 @@ public class CalculatorGUI extends JFrame implements ActionListener {
     // create a frame of the window
     static JFrame frame;
     //create the two text fields for the screen
-    static JTextField screen0;
-    static JTextField screen;
+    static JTextField screen0, screen;
 
-    //numbers and operands
-    double n, firstNo, secondNo, result;
+    // doubles needed for the calculations and current mock getResult method
+    double firstNo, secondNo, result;
+    // string to contain the current operator
     String op;
 
     // constructor
