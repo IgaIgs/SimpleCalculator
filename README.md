@@ -1,2 +1,3 @@
 # SimpleCalculator
-Simple calculator app for Android
+Simple calculator program with GUI
+// to update
